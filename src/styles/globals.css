@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .navbar-icon{
-      @apply relative flex items-center justify-center 
-      h-8 w-8 mt-2 mb-2 mx-auto  
-    }
+@layer components {
+  .navbar-icon {
+    @apply relative flex items-center justify-center 
+      h-8 w-8 mt-2 mb-2 mx-auto;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
