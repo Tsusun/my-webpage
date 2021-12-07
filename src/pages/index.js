@@ -5,8 +5,10 @@ import Presentation from "@components/ui/presentation"
 import Head from "next/head"
 import { useTokenPrice } from "@components/hooks/web3/useTokenPrice"
 import { ETH_COINGECKO_URL, AVAX_COINGECKO_URL, BNB_COINGECKO_URL } from "@utils/constants"
+import Projects from "@components/ui/projects"
+import { getAllProjects } from "@content/projects/fetcher"
 
-export default function Home() {
+export default function Home({ project, services }) {
   const ethPrice = useTokenPrice(ETH_COINGECKO_URL)
   const avaxPrice = useTokenPrice(AVAX_COINGECKO_URL)
   const bnbPrice = useTokenPrice(BNB_COINGECKO_URL)
@@ -20,13 +22,25 @@ export default function Home() {
       <Hero />
       <Presentation />
       <Donation
-        className="mt-2"
+        className="mx-4"
         ethPrice={ethPrice.data}
         avaxPrice={avaxPrice.data}
         bnbPrice={bnbPrice.data}
       />
+      <Projects
+      
+      project={project} />
     </div>
   )
+}
+
+export function getStaticProps() {
+  const { data } = getAllProjects()
+  return {
+    props: {
+      project: data
+    }
+  }
 }
 
 Home.Layout = BaseLayout
