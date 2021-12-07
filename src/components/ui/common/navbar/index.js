@@ -13,14 +13,14 @@ export default function Navbar() {
         <nav className="relative self-auto" aria-label="Global">
           <div className="flex  justify-between items-center">
             <div>
-              <AiFillHome onClick={() => (document.location.href = "/")} size="24" className="navbar-icon bg-black" />
+              <AiFillHome onClick={() => (document.location.href = "/")} size="24" className="navbar-icon" />
             </div>
             <div className="flex">
               <span className="px-2" onClick={handleMode}>
                 {darkTheme ? (
                   <BsTsunami size="24" className="navbar-icon " />
                 ) : (
-                  <GiNinjaHead size="24" className="navbar-icon bg-black" />
+                  <GiNinjaHead size="24" className="navbar-icon" />
                 )}
               </span>
               <Button onClick={() => window.open("https://metamask.io/download", "_blank")}>

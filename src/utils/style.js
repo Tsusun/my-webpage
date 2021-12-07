@@ -1,3 +1,3 @@
 export function calcRem(px){
-    return `${px / 13.75}rem`
+    return `${px / 13.25}rem`
   }
