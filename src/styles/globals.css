@@ -13,3 +13,38 @@
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
+
+
+.presentation {
+  font-family: "Audiowide", sans-serif;
+  
+}
+
+.presentatin-container{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 50px;
+  font-size: 20px;
+  margin-top: -6rem;
+}
+
+.list-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.list-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+
+}
+
+.list-content-first{
+  margin: 1rem;
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-content{
+  border-left: 1px solid;
+  margin: 1rem;
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
