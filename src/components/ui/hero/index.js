@@ -3,14 +3,23 @@ import Typewriter from "typewriter-effect"
 const height = calcRem(1013)
 
 export default function Hero() {
-  const names = ["Welcome to my World", "Here you will find a:", "xxx",  "Sushi Farm", " Lover ❤"]
+  const names = ["Welcome to my World", "Here you will find a:", "xxx", "Sushi Farm", " Lover ❤"]
 
   return (
     <div
-      className="bg-cover text-center"
-      style={{ backgroundImage: "url(/hero-bg-single2x-p-2000.png)", width: "100%", height: height }}
+      className="text-center"
+      style={{
+        backgroundImage: "url(/hero-bg-single2x-p-2000.png)",
+        width: "100%",
+        height: height,
+        backgroundColor: "#464646",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover"
+      }}
     >
-        <div className="m">
+      <div>
         <Typewriter
           options={{
             autoStart: true,
@@ -35,7 +44,7 @@ export default function Hero() {
               .start()
           }}
         />
-        </div>
+      </div>
     </div>
   )
 }
