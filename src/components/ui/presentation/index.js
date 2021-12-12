@@ -6,6 +6,7 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
+  Textarea,
 } from "@chakra-ui/react"
 import { Formik } from "formik"
 import * as Yup from "yup"
@@ -19,7 +20,8 @@ export default function Presentation() {
       initialValues={{ username: "", email: "" }}
       validationSchema={Yup.object().shape({
         username: Yup.string().required("Name required").min(2, "Username is too short"),
-        email: Yup.string().email("Invalid email").required("Required")
+        email: Yup.string().email("Invalid email").required("Required"),
+        text: Yup.string().required("Required")
       })}
       onSubmit={(values, actions) => {
         alert(JSON.stringify(values, null, 2))
@@ -97,6 +99,7 @@ export default function Presentation() {
 
                   <TextField name="username" label="Enter Username" placeholder="name" />
                   <TextField name="email" label="Enter E-mail" type="email" placeholder="email@xyz.com" />
+                  <TextField name="text" as={Textarea} label="Enter your message" type="text" placeholder="" />
 
                   <Button onClick={formik.handleSubmit} hoverable={false} className=" m-10 ">
                     <p>Submit</p>
