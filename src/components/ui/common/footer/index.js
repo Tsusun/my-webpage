@@ -1,10 +1,10 @@
 export default function Footer() {
   const color = "white"
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-gray-900" style={{marginTop: "-3rem"}}>
       <div className="mx-auto flex flex-col items-center py-6 text-white">
-        <p className="mb-6 text-sm text-primary-2 font-bold">© {new Date().getFullYear()} Silvan Reigue</p>
-        <div className="flex flex-col-2 ">
+        <p className="mb-6 mt-10 text-sm text-primary-2 font-bold">© {new Date().getFullYear()} Silvan Reigue</p>
+        <div className="flex flex-col-2">
           <a className="px-2" href="https://github.com/Tsusun">
             <svg width="34" height="34" viewBox="0 0 512 512" className="inline">
               <path

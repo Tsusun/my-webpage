@@ -9,7 +9,7 @@ export default function Navbar() {
   const handleMode = () => setDarkTheme(!darkTheme)
   return (
     <section>
-      <div className="relative py-6 pt-6 px-4 sm:px-6 lg:px-8">
+      <div className="relative p-2.5">
         <nav className="relative self-auto" aria-label="Global">
           <div className="flex  justify-between items-center">
             <div>

@@ -28,16 +28,16 @@ export default function Donation({ className, ethPrice, avaxPrice, bnbPrice }) {
   const [selected, setSelected] = useState("0")
 
   return (
-    <div className="bg-yellow-800">
-      <div className="flex justify-center mt-2">
+    <div className="bg-yellow-800 ">
+      <div className="flex justify-center p-8">
         <Button onClick={onOpen}>Donate</Button>
         <ChakraProvider>
-          <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={true}>
+          <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={true} >
             <ModalOverlay />
-            <ModalContent>
-              <ModalHeader>Donation</ModalHeader>
+            <ModalContent >
+              <ModalHeader className="mx-auto">Donation</ModalHeader>
               <ModalCloseButton />
-              <ModalBody>
+              <ModalBody  className="">
                 <InputGroup size="md">
                   <Input placeholder="Enter amount" size="lg" color="" />
                   <InputRightElement width="4.5rem">
@@ -85,7 +85,7 @@ export default function Donation({ className, ethPrice, avaxPrice, bnbPrice }) {
                     </Menu>
                   </InputRightElement>
                 </InputGroup>
-                <Button hoverable={false}>
+                <Button hoverable={false} className="mx-32 ">
                   <p>Donate</p>
                 </Button>
               </ModalBody>
