@@ -7,6 +7,7 @@ import { useTokenPrice } from "@components/hooks/web3/useTokenPrice"
 import { ETH_COINGECKO_URL, AVAX_COINGECKO_URL, BNB_COINGECKO_URL } from "@utils/constants"
 import Projects from "@components/ui/projects"
 import { getAllProjects } from "@content/projects/fetcher"
+import CallToAction from "@components/ui/call-to-action"
 
 export default function Home({ project, services }) {
   const ethPrice = useTokenPrice(ETH_COINGECKO_URL)
@@ -18,18 +19,18 @@ export default function Home({ project, services }) {
       <Head>
         <title>Silvan Reigue - Homepage</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/SR.png" />
+        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"/> */}
       </Head>
       <Hero />
-      <Presentation />
+      <Presentation className="flex-wraps" />
       <Donation
         className="mx-4"
         ethPrice={ethPrice.data}
         avaxPrice={avaxPrice.data}
         bnbPrice={bnbPrice.data}
       />
-      <Projects
-      
-      project={project} />
+      <Projects project={project} />
+      <CallToAction/>
     </div>
   )
 }

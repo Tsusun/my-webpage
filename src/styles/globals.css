@@ -14,7 +14,6 @@
   background: transparent; /* make scrollbar transparent */
 }
 
-
 .presentation {
   font-family: "Audiowide", sans-serif;
   
@@ -22,29 +21,32 @@
 
 .presentatin-container{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 15px 50px;
-  font-size: 20px;
+  border-radius: 50px;
+  font-size: 1.25em;
   margin-top: -6rem;
+  line-height: 1.8;
 }
 
 .list-title {
-  font-size: 25px;
+  font-size: 1.75em;
   font-weight: bold;
 }
 
 .list-subtitle {
-  font-size: 22px;
+  font-size: 1.25em;
   font-weight: 600;
 
 }
 
 .list-content-first{
   margin: 1rem;
-  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .list-content{
   border-left: 1px solid;
   margin: 1rem;
-  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.call-to-action-element{
+  border-radius: 30px;
 }
