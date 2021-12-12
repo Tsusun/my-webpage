@@ -1,116 +1,79 @@
 import Image from "next/image"
 import { Button } from "../common"
 import { useDisclosure } from "@chakra-ui/hooks"
-import {
-  ChakraProvider,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  Textarea,
-} from "@chakra-ui/react"
-import { Formik } from "formik"
-import * as Yup from "yup"
-import TextField from "../text-field"
+import Form from "../form"
 
 export default function Presentation() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Formik
-      initialValues={{ username: "", email: "" }}
-      validationSchema={Yup.object().shape({
-        username: Yup.string().required("Name required").min(2, "Username is too short"),
-        email: Yup.string().email("Invalid email").required("Required"),
-        text: Yup.string().required("Required")
-      })}
-      onSubmit={(values, actions) => {
-        alert(JSON.stringify(values, null, 2))
-        actions.resetForm()
-      }}
-    >
-      {(formik) => (
-        <div className="flex flex-col">
-          <div className="container max-w-7xl mx-auto">
-            <div className="lg:flex flex-col-3 sm:flex-col-1 bg-white m-4 text-center presentatin-container">
-              <div className="list-content-first">
-                <Image src="/Avatar.png" height="100rem" width="200rem" alt="" />
-                <h1 className="list-title">Who am I</h1>
-                <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                <p className="list-subtitle">Things I enjoy designing:</p>
-                <p>UX, UI, Web, Mobile, Apps, Logos</p>
-                <p className="list-subtitle">Design Tools:</p>
-                <ul>
-                  <li>Python🐍</li>
-                  <li></li>
-                  <li>OOP</li>
-                  <li>☕Java</li>
-                  <li>Pen &amp; Paper</li>
-                  <li>Sketch</li>
-                  <li>Webflow</li>
-                  <li>Zeplin</li>
-                </ul>
-              </div>
-              <div className="list-content">
-                <Image src="/tools.png" height="100rem" width="100rem" alt="" />
-                <h1 className="list-title">Blockchain Developer</h1>
-                <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-                <p className="list-subtitle">Languages I speak:</p>
-                <p>HTML, Pug, Slim, CSS, Sass, Less</p>
-                <p className="list-subtitle">Dev Tools:</p>
-                <ul>
-                  <li>⚡VisualStudio Code</li>
-                  <li>Truffle🍄</li>
-                  <li>Ganache</li>
-                  <li>Chakra Ui</li>
-                  <li></li>
-                  <li>Codepen</li>
-                  <li> Github</li>
-                  <li>Gitlab</li>
-                  <li>Terminal</li>
-                </ul>
-              </div>
-              <div className="list-content">
-                <Image src="/books.png" height="100rem" width="100rem" alt="" />
-                <h1 className="list-title">Engineer</h1>
-                <p>I genuinely care about people, and love helping fellow designers work on their craft.</p>
-                <p className="list-subtitle">Experiences I draw from:</p>
-                <p>UX/UI, Product design, Freelancing</p>
-                <p className="list-subtitle">Mentor Stats:</p>
-                <ul>
-                  <li>5 years experience</li>
-                  <li>26 short courses</li>
-                  <li>42 bootcamps</li>
-                  <li>125+ students</li>
-                  <li>1,400+ mentor sessions</li>
-                  <li>60+ group critiques</li>
-                  <li>12,000+ comments</li>
-                </ul>
-              </div>
-            </div>
+    <div className="flex flex-col">
+      <div className="container max-w-7xl mx-auto">
+        <div className="lg:flex flex-col-3 sm:flex-col-1 bg-white m-4 text-center presentatin-container">
+          <div className="list-content-first">
+            <Image src="/Avatar.png" height="100rem" width="200rem" alt="" />
+            <h1 className="list-title">Who am I</h1>
+            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+            <p className="list-subtitle">Things I enjoy designing:</p>
+            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+            <p className="list-subtitle">Design Tools:</p>
+            <ul>
+              <li>Python🐍</li>
+              <li></li>
+              <li>OOP</li>
+              <li>☕Java</li>
+              <li>Pen &amp; Paper</li>
+              <li>Sketch</li>
+              <li>Webflow</li>
+              <li>Zeplin</li>
+            </ul>
           </div>
-          <div className="max-w-7xl mx-auto">
-            <Button onClick={onOpen} style={{ fontSize: "1.75em", margin: "5rem", padding: "1.5rem" }}>
-              Work together
-            </Button>
-            <ChakraProvider>
-              <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={true}>
-                <ModalOverlay />
-                <ModalContent className="p-8" style={{ padding: "1.5rem" }}>
-
-                  <TextField name="username" label="Enter Username" placeholder="name" />
-                  <TextField name="email" label="Enter E-mail" type="email" placeholder="email@xyz.com" />
-                  <TextField name="text" as={Textarea} label="Enter your message" type="text" placeholder="" />
-
-                  <Button onClick={formik.handleSubmit} hoverable={false} className=" m-10 ">
-                    <p>Submit</p>
-                  </Button>
-                </ModalContent>
-              </Modal>
-            </ChakraProvider>
+          <div className="list-content">
+            <Image src="/tools.png" height="100rem" width="100rem" alt="" />
+            <h1 className="list-title">Blockchain Developer</h1>
+            <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+            <p className="list-subtitle">Languages I speak:</p>
+            <p>HTML, Pug, Slim, CSS, Sass, Less</p>
+            <p className="list-subtitle">Dev Tools:</p>
+            <ul>
+              <li>⚡VisualStudio Code</li>
+              <li>Truffle🍄</li>
+              <li>Ganache</li>
+              <li>Chakra Ui</li>
+              <li></li>
+              <li>Codepen</li>
+              <li> Github</li>
+              <li>Gitlab</li>
+              <li>Terminal</li>
+            </ul>
+          </div>
+          <div className="list-content">
+            <Image src="/books.png" height="100rem" width="100rem" alt="" />
+            <h1 className="list-title">Engineer</h1>
+            <p>I genuinely care about people, and love helping fellow designers work on their craft.</p>
+            <p className="list-subtitle">Experiences I draw from:</p>
+            <p>UX/UI, Product design, Freelancing</p>
+            <p className="list-subtitle">Mentor Stats:</p>
+            <ul>
+              <li>5 years experience</li>
+              <li>26 short courses</li>
+              <li>42 bootcamps</li>
+              <li>125+ students</li>
+              <li>1,400+ mentor sessions</li>
+              <li>60+ group critiques</li>
+              <li>12,000+ comments</li>
+            </ul>
           </div>
         </div>
-      )}
-    </Formik>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <Button onClick={onOpen} style={{ fontSize: "1.75em", margin: "5rem", padding: "1.5rem" }}>
+          Work together
+        </Button>
+        <Form openAction={isOpen} closeAction={onClose} />
+
+      </div>
+    </div>
   )
 }
 
