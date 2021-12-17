@@ -9,7 +9,7 @@ export default function Button({ children, className, hoverable = true, variant 
     return (
       <button
         {...rest} // Thanks to this no need to write onClick={onClick}
-        className={`disabled:opacity-70  disabled:cursor-not-allowed px-8 py-3 border rounded-md text-base font-medium ${className} ${buttonColor[variant]}`}
+        className={`disabled:opacity-70  disabled:cursor-not-allowed px-10 py-3 border rounded-md text-base font-bold font-sans ${className} ${buttonColor[variant]}`}
       >
         {children}
       </button>

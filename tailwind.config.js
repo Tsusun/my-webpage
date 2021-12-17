@@ -3,6 +3,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['"Press Start 2P"'],
+    },
   },
   variants: {
     extend: {},

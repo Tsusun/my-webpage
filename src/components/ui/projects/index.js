@@ -1,11 +1,13 @@
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Projects({ project }) {
   return (
-    <section className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mb-5 max-w-7xl mx-auto mt-4 bg-yellow-100">
+    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mb-5 max-w-7xl mx-auto mt-4">
       {project.map((project) => (
-        <div key={project.id} className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-4 mx-4 mb-4">
+        <div
+          key={project.id}
+          className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-4 mx-4 mb-4 dark:bg-gray-600 dark:bg-opacity-70 "
+        >
           <div className="flex h-full">
             <div className="flex h-full">
               <Image
@@ -23,15 +25,15 @@ export default function Projects({ project }) {
               </div>
               <a
                 href={project.link}
-                className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                className="block mt-1 text-lg leading-tight font-bold text-black hover:underline"
               >
                 {project.title}
               </a>
-              <p className="mt-2 text-gray-500">{project.description}</p>
+              <p className="mt-2 text-gray-500 font-medium dark:text-white">{project.description}</p>
             </div>
           </div>
         </div>
       ))}
-    </section>
+    </div>
   )
 }

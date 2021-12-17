@@ -1,19 +1,30 @@
 import { Button } from "../common"
 import { useDisclosure } from "@chakra-ui/hooks"
 import Form from "../form"
+import { IoIosRocket } from "react-icons/io"
 
 export default function CallToAction() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-        <div className="call-to-action-element lg:flex flex-col-3 md:flex-col-1 max-w-lg mx-auto p-7 text-white bg-gray-900 m-1">
-          <h1 style={{ fontSize: "1.75em", fontWeight: "bold" }}>Start a project</h1>
-          <p style={{ textAlignLast: "center", textAlign: "center", margin: "1rem" }}>
-            Interested in strating a project. Do you want to cooperate or want to ask something?
-          </p>
-          <Button onClick={onOpen} >Here we Go</Button>
-          <Form openAction={isOpen} closeAction={onClose} />
-        </div>
+    <div className="call-to-action-element flex justify-center p-7 text-white bg-gray-900">
+      <div>
+        <h1 className="flex flex-col-2 items-center text-center" style={{ fontSize: "1.75em", fontWeight: "bold" }}>
+          <IoIosRocket size="4rem" />
+          &nbsp;&nbsp;Start a project
+        </h1>
+      </div>
+      <div>
+        <p style={{ margin: "1rem" }}>
+          Interested in strating a project.
+          <br /> Do you want to cooperate or want to ask something?
+        </p>
+      </div>
+      <div>
+        <Button onClick={onOpen}>Here we Go</Button>
+      </div>
 
+      <Form openAction={isOpen} closeAction={onClose} />
+    </div>
   )
 }

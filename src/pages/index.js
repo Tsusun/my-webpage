@@ -13,13 +13,19 @@ export default function Home({ project, services }) {
   const ethPrice = useTokenPrice(ETH_COINGECKO_URL)
   const avaxPrice = useTokenPrice(AVAX_COINGECKO_URL)
   const bnbPrice = useTokenPrice(BNB_COINGECKO_URL)
-
   return (
-    <div>
+    <div
+      className="font-sans"
+      style={{
+        backgroundImage: "url(/Moving-Backgrounds-For-Tumblr-Www-Pixshark-Com-Images-Bing-.gif)",
+        width: "100%",
+        backgroundPosition: "center center"
+      }}
+    >
       <Head>
         <title>Silvan Reigue - Homepage</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/SR.png" />
-        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"/> */}
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
       </Head>
       <Hero />
       <Presentation className="flex-wraps" />
@@ -30,7 +36,7 @@ export default function Home({ project, services }) {
         bnbPrice={bnbPrice.data}
       />
       <Projects project={project} />
-      <CallToAction/>
+      <CallToAction />
     </div>
   )
 }

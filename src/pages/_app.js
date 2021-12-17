@@ -4,12 +4,18 @@ const Noop = ({ children }) => <>{children}</>
 function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout ?? Noop
 
-  return (      
-      <section className="w-full h-screen bg-cover bg-back-img dark:bg-gray-900 dark:text-white">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </section>
+  return (
+    <section
+      className="w-full h-screen bg-cover font-sans dark:text-white"
+      style={{
+        backgroundImage: "url(/Moving-Backgrounds-For-Tumblr-Www-Pixshark-Com-Images-Bing-.gif)",
+        width: "100%",
+      }}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </section>
   )
 }
 

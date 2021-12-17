@@ -3,23 +3,20 @@
       "id": "001",
       "type": "Python",
       "title": "Crypto portfolio tracking app",
-      "description": "Crypto portfolio tracker that makes it easy for users to track their crypto finances over time.",
+      "description": "Tool that makes it easy for users to track their crypto balance over time.",
       "coverImage": "/python_Logo.png",
       "author": "Tsusun",
-      "link": "https://github.com/Tsusun/Cryptofolio_Tracker",
-      "slug": "crypto-portfolio-tracking-app",
-      "createdAt": ""
+      "link": "https://github.com/Tsusun/Cryptofolio_Tracker"
     },
     {
       "id": "002",
       "type": "JAVA",
-      "title": "An electrical resistance calculator GUI",
-      "description": "Ohm Project is a tool that allows you, once you have entered the number of bands and their colours, to know the electrical resistance value of your resistor.",
+      "title": "Electrical resistance calculator",
+      "description": "Soft that allows you, once you have entered the number of bands and their colours, to know the electrical resistance value of your resistor.",
       "coverImage": "/Java_Logo.png",
       "author": "Tsusun",
-      "link": "https://github.com/Tsusun/Ohm_Project",
-      "slug": "electrical-resistance-calculator",
-      "createdAt": ""
+      "link": "https://github.com/Tsusun/Ohm_Project"
+
     },
     {
       "id": "003",
@@ -28,8 +25,6 @@
       "description": "My webpage where you are, right now",
       "coverImage": "/Next_JS.png",
       "author": "Tsusun",
-      "link": "https://github.com/Tsusun/my-webpage",
-      "slug": "webpage",
-      "createdAt": ""
+      "link": "https://github.com/Tsusun/my-webpage"
     }
   ]
