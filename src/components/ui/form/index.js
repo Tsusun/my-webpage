@@ -5,8 +5,7 @@ import TextField from "../../form/text-field"
 import * as Yup from "yup"
 import { Textarea } from "@chakra-ui/react"
 
-export default function Form({openAction, closeAction}) {
-
+export default function Form({ openAction, closeAction }) {
   return (
     <Formik
       initialValues={{ username: "", email: "" }}
@@ -23,20 +22,19 @@ export default function Form({openAction, closeAction}) {
       {(formik) => (
         <div>
           <ChakraProvider>
-              <Modal isOpen={openAction} onClose={closeAction} blockScrollOnMount={true}>
-                <ModalOverlay />
-                <ModalContent className="p-8" style={{ padding: "1.5rem" }}>
+            <Modal isOpen={openAction} onClose={closeAction} blockScrollOnMount={true}>
+              <ModalOverlay />
+              <ModalContent className="p-8" style={{ padding: "1.5rem" }}>
+                <TextField name="username" label="Enter Username" placeholder="name" />
+                <TextField name="email" label="Enter E-mail" type="email" placeholder="email@xyz.com" />
+                <TextField name="text" as={Textarea} label="Enter your message" type="text" placeholder="" />
 
-                  <TextField name="username" label="Enter Username" placeholder="name" />
-                  <TextField name="email" label="Enter E-mail" type="email" placeholder="email@xyz.com" />
-                  <TextField name="text" as={Textarea} label="Enter your message" type="text" placeholder="" />
-                  
-                  <Button onClick={formik.handleSubmit} hoverable={false} className=" m-10 ">
-                    <p>Submit</p>
-                  </Button>
-                </ModalContent>
-              </Modal>
-            </ChakraProvider>
+                <Button onClick={formik.handleSubmit} hoverable={false} className="m-10">
+                  <p>Submit</p>
+                </Button>
+              </ModalContent>
+            </Modal>
+          </ChakraProvider>
         </div>
       )}
     </Formik>
