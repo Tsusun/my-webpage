@@ -3,7 +3,7 @@ import { Button } from "../common"
 import { useDisclosure } from "@chakra-ui/hooks"
 import Form from "../form"
 import moment from "moment"
-import { GiAstronautHelmet, GiSpaceSuit, GiFrance, GiMushroomGills } from "react-icons/gi"
+import { GiAstronautHelmet, GiSpaceSuit, GiFrance } from "react-icons/gi"
 import {
   SiBitcoincash,
   SiBitcoin,
@@ -25,7 +25,7 @@ export default function Presentation() {
       <div className="max-w-7xl mx-auto">
         <div className="divide-y-4 bg-white bg-opacity-80 m-4 text-center presentatin-container dark:bg-gray-600 dark:bg-opacity-50">
           <div className="list-content">
-            <Image src="/Avatar.png" height="100rem" width="200rem" alt="" />
+            <Image src="/Avatar_Pixel_Art_V5.png" height="100rem" width="200rem" alt="" />
             <h1 className="list-title">
               Who am I ? <GiSpaceSuit size="5rem" />
             </h1>
@@ -46,7 +46,7 @@ export default function Presentation() {
             </p>
           </div>
           <div className="list-content">
-            <Image src="/Avatar.png" height="100rem" width="200rem" alt="" />
+            <Image src="/Alien_Pixel_Art_V5.png" height="100rem" width="100rem" alt="" />
             <h1 className="list-title">Softskills</h1>
             <a className="px-2" href="https://twitter.com/jungler_v">
               <BsTwitter size="4rem" className="inline" />
@@ -68,7 +68,7 @@ export default function Presentation() {
             </ul>
           </div>
           <div className="list-content">
-            <Image src="/tools.png" height="100rem" width="100rem" alt="" />
+            <Image src="/Blockchain_Pixel_Art_V4.png" height="100rem" width="100rem" alt="" />
             <h1 className="list-title">Blockchain Developer</h1>
             <a className="px-2" href="https://github.com/Tsusun">
               <svg width="65" height="65" viewBox="0 0 512 512" className="inline">
@@ -113,7 +113,7 @@ export default function Presentation() {
             </ul>
           </div>
           <div className="list-content">
-            <Image src="/books.png" height="100rem" width="100rem" alt="" />
+            <Image src="/Engineer_Pixel_Art_V4.png" height="100rem" width="100rem" alt="" />
             <h1 className="list-title">Engineer</h1>
             <a className="px-2" href="https://www.linkedin.com/in/silvanreigue/">
               <svg width="65" height="65" viewBox="0 0 512 512" className="inline">
@@ -128,7 +128,7 @@ export default function Presentation() {
               interesting tools and methods.
             </p>
             <p className="list-subtitle">Experiences I draw from:</p>
-            <p>UX/UI, Product design, Freelancing</p>
+            <p>Personal projects, Hackathons, Freelancing</p>
             <p className="list-subtitle">Used Stuff:</p>
             <ul>
               <li>

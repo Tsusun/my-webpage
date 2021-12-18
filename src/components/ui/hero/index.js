@@ -5,7 +5,7 @@ import { GiSolarSystem } from "react-icons/gi"
 const height = calcRem(1013)
 
 export default function Hero() {
-  const names = ["a Blockchain Dev 💻", "⚙️ an Engineer", "a Sushi Farm", " Lover♥"]
+  const names = ["a Blockchain Dev 💻", "⚙️ an Engineer", "a Sushi Farm", " Lover💘"]
 
   return (
     <div
