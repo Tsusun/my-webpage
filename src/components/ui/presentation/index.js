@@ -35,7 +35,7 @@ export default function Presentation() {
               <br /> I started my journey into crypto and shorter after Blockchain back in November 2020. Like
               everyone I was first interested into the making profit side of things,
               <br />
-              but quickly relized how amazing this world is. The biggest lesson I learned during this year was
+              but quickly relized how amazing this world is. The biggest lesson I&apos;ve learned over the course of this year has been to
               <br />
               <strong>
                 <SiBitcoin size="2rem" className="inline" />
@@ -124,7 +124,7 @@ export default function Presentation() {
               </svg>
             </a>
             <p>
-              I&apos;m really interested in problem solving, because that&apos;s when you get to know a lot of
+              I&apos;m really interested in problem solving, because that&apos;s where you get to know a lot of
               interesting tools and methods.
             </p>
             <p className="list-subtitle">Experiences I draw from:</p>
