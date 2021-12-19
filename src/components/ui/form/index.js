@@ -1,11 +1,13 @@
 import { Button } from "../common"
-import { Formik } from "formik"
+import { Field, Formik } from "formik"
 import { ChakraProvider, Modal, ModalOverlay, ModalContent } from "@chakra-ui/react"
 import TextField from "../../form/text-field"
 import * as Yup from "yup"
 import { Textarea } from "@chakra-ui/react"
+import { init } from "emailjs-com"
 
 export default function Form({ openAction, closeAction }) {
+  init("user_MA9ApnpL8FeLWetSYzwQo")
   return (
     <Formik
       initialValues={{ username: "", email: "" }}
@@ -15,8 +17,19 @@ export default function Form({ openAction, closeAction }) {
         text: Yup.string().required("Required")
       })}
       onSubmit={(values, actions) => {
-        alert(JSON.stringify(values, null, 2))
-        actions.resetForm()
+        try {
+          alert(JSON.stringify(values, null, 2))
+          emailjs.send("service_ynt7pwu", "template_elw73xj", values).then(() => {
+            sentMessage.classList.add("success")
+            sentMessage.innerHTML = CONTACT_ERROR.success
+            actions.resetForm()
+            actions.setSubmitting(false)
+          })
+        } catch {
+          sentMessage.classList.add("error")
+          actions.setSubmitting(false)
+          sentMessage.innerHTML = CONTACT_ERROR.error
+        }
       }}
     >
       {(formik) => (
