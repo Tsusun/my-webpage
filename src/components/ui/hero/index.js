@@ -15,7 +15,7 @@ export default function Hero() {
         height: height
       }}
     >
-      <div className=" bg-gray-50 bg-opacity-60 rounded p-6 dark:bg-gray-600 dark:bg-opacity-50">
+      <div className=" bg-gray-50 bg-opacity-60 rounded p-6 sm:mx-5 dark:bg-gray-600 dark:bg-opacity-50">
         <h1>Silvan Reigue</h1>
         <h2>
           Welcome to my Universe

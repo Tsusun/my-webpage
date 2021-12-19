@@ -2,11 +2,11 @@ import Image from "next/image"
 
 export default function Projects({ project }) {
   return (
-    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mb-5 max-w-7xl mx-auto mt-4">
+    <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 mb-5 max-w-7xl mx-auto mt-4 ">
       {project.map((project) => (
         <div
           key={project.id}
-          className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-4 mx-4 mb-4 dark:bg-gray-600 dark:bg-opacity-70 "
+          className="bg-white rounded-xl shadow-md overflow-hidden mt-4 mx-4 mb-4 dark:bg-gray-600 dark:bg-opacity-70 "
         >
           <div className="flex h-full">
             <div className="flex h-full">

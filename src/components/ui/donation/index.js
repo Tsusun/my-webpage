@@ -97,7 +97,7 @@ export default function Donation({ className, ethPrice, avaxPrice, bnbPrice }) {
           </Modal>
         </ChakraProvider>
       </div>
-      <div className={classNames("grid grid-cols-3 space-x-4 mt-2", className)}>
+      <div className={classNames("grid lg:grid-cols-3 sm:grid-cols-1 lg:space-x-4 mt-2", className)}>
         {tokenPriceInfo("/small-eth.webp", ethPrice, "ETH")}
         {tokenPriceInfo("/small-avax.webp", avaxPrice, "AVAX")}
         {tokenPriceInfo("/small-binance-coin.webp", bnbPrice, "BNB")}
@@ -110,12 +110,12 @@ const tokenPriceInfo = (tokenLogoUrl, tokenPrice, tokenName) => {
   return (
     <div className="flex flex-col border drop-shadow rounded-md items-center mb-2 bg-white dark:bg-gray-600 dark:bg-opacity-50 ">
       <div className="flex space-x-1 text-2xl font-bold justify-center">
-        <Image layout="fixed" height="35px" width="35px" src={tokenLogoUrl} alt={tokenName} />
+        <Image layout="fixed" height="50em" width="50em" src={tokenLogoUrl} alt={tokenName} />
         <p className="flex flex-col-2 items-center">
           = {tokenPrice}$
         </p>
       </div>
-      <p className="italic">Current {tokenName} Price</p>
+      <p className="italic sm: text-center center">Current {tokenName} Price</p>
     </div>
   )
 }

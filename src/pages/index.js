@@ -26,6 +26,7 @@ export default function Home({ project, services }) {
         <title>Silvan Reigue - Homepage</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/SR.png" />
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5"></meta>
       </Head>
       <Hero />
       <Presentation className="flex-wraps" />
