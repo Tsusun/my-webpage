@@ -29,7 +29,7 @@ export default function Form({ openAction, closeAction }) {
                 <TextField name="email" label="Enter E-mail" type="email" placeholder="email@xyz.com" />
                 <TextField name="text" as={Textarea} label="Enter your message" type="text" placeholder="" />
 
-                <Button onClick={formik.handleSubmit} hoverable={false} className="m-10">
+                <Button onClick={formik.handleSubmit} hoverable={false} className="m-10" type="submit">
                   <p>Submit</p>
                 </Button>
               </ModalContent>
