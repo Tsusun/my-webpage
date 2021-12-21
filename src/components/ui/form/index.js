@@ -18,8 +18,9 @@ export default function Form({ openAction, closeAction }) {
       })}
       onSubmit={(values, actions) => {
         try {
-          alert(JSON.stringify(values, null, 2))
+          
           emailjs.send("service_ynt7pwu", "template_elw73xj", values).then(() => {
+            alert(JSON.stringify(values, null, 2))
             sentMessage.classList.add("success")
             sentMessage.innerHTML = CONTACT_ERROR.success
             actions.resetForm()
